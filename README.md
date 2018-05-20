@@ -1,2 +1,2 @@
 # PyUtils
-Python utilitymodule
+Python utility modules
