@@ -33,13 +33,13 @@ def main():
 
     taskQueue.join()
 
-    print('main takes {}s'.format(time() -ts))
+    print('main takes time={}s'.format(time() -ts))
 
     serial_time = output1['time_taken'] + output2['time_taken']\
     + output3['time_taken'] + output4['time_taken']  + output5['time_taken']\
     + output6['time_taken']
 
-    print('serial exec time would be {}s'.format(serial_time))
+    print('serial exec time would be time={}s'.format(serial_time))
 
 # ==============================================================================
 if __name__ == '__main__':
