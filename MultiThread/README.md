@@ -1,13 +1,13 @@
 ## Reference output comparison
 
 ```
-getData for="http://example.com" takes=0.04976844787597656s
-getData for="http://example.com" takes=0.05383467674255371s
-getData for="http://example.com" takes=0.07397031784057617s
-getData for="http://example.com" takes=0.06400156021118164s
-getData for="http://example.com" takes=0.0712137222290039s
-getData for="http://google.com" takes=0.21584558486938477s
+getData for="http://example.com" takes time=0.057142019271850586s
+getData for="http://example.com" takes time=0.057142019271850586s
+getData for="http://example.com" takes time=0.05814385414123535s
+getData for="http://example.com" takes time=0.03840231895446777s
+getData for="http://example.com" takes time=0.0394434928894043s
+getData for="http://google.com" takes time=0.16912460327148438s
 
-main takes 0.21623611450195312s
-serial exec time would be 0.5286343097686768s
+main takes time=0.1701216697692871s
+serial exec time would be time=0.41939830780029297s
 ```
