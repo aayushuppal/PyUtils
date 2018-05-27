@@ -11,26 +11,26 @@ CPU_COUNT = cpu_count()
 def main():
     ts = time()
 
-    taskQueue = Queue()
+    task_queue = Queue()
     for i in range(CPU_COUNT):
-        worker = ThreadWorker(taskQueue)
+        worker = ThreadWorker(task_queue)
         worker.daemon = True
         worker.start()
 
     output1 = {}
-    taskQueue.put(('getData', {'get_url' : 'http://google.com', 'output' : output1}))
+    task_queue.put(('getData', {'get_url' : 'http://google.com', 'output' : output1}))
     output2 = {}
-    taskQueue.put(('getData', {'get_url' : 'http://example.com','output' : output2}))
+    task_queue.put(('getData', {'get_url' : 'http://example.com', 'output' : output2}))
     output3 = {}
-    taskQueue.put(('getData', {'get_url' : 'http://example.com','output' : output3}))
+    task_queue.put(('getData', {'get_url' : 'http://google.com', 'output' : output3}))
     output4 = {}
-    taskQueue.put(('getData', {'get_url' : 'http://example.com','output' : output4}))
+    task_queue.put(('getData', {'get_url' : 'http://example.com', 'output' : output4}))
     output5 = {}
-    taskQueue.put(('getData', {'get_url' : 'http://example.com','output' : output5}))
+    task_queue.put(('getData', {'get_url' : 'http://google.com', 'output' : output5}))
     output6 = {}
-    taskQueue.put(('getData', {'get_url' : 'http://example.com','output' : output6}))
+    task_queue.put(('getData', {'get_url' : 'http://example.com', 'output' : output6}))
 
-    taskQueue.join()
+    task_queue.join()
 
     print('main takes time={}s'.format(time() -ts))
 

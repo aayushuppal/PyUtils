@@ -1,4 +1,5 @@
 import urllib.request
+from urllib.error import HTTPError
 from time import time
 
 def getData(**kwargs):
@@ -6,7 +7,10 @@ def getData(**kwargs):
 
     args = kwargs['args']
 
-    content = urllib.request.urlopen(args['get_url']).read()
+    try:
+        content = urllib.request.urlopen(args['get_url']).read()
+    except HTTPError:
+        content = None
 
     args['output']['content']    = content
     args['output']['time_taken'] = time() - ts
