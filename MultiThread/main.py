@@ -5,7 +5,6 @@ from time import time
 from util import getData
 from util import ThreadWorker
 from multiprocessing import cpu_count
-from pprint import pprint
 
 CPU_COUNT = cpu_count()
 
